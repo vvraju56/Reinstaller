@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Reinstaller - Software Reinstallation Management</title>
+    <!-- Font Awesome CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
         * {
             margin: 0;
@@ -109,6 +111,175 @@
             margin-top: 1.5rem;
             font-size: 0.9rem;
         }
+
+        /* Footer Styles */
+        .footer {
+            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
+            color: #ffffff;
+            padding: 3rem 0 1rem;
+            margin-top: 4rem;
+            border-radius: 20px 20px 0 0;
+            box-shadow: 0 -10px 30px rgba(0, 0, 0, 0.3);
+        }
+
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+            display: grid;
+            grid-template-columns: 1fr 2fr;
+            gap: 3rem;
+            align-items: start;
+        }
+
+        .footer-brand {
+            text-align: left;
+        }
+
+        .brand-title {
+            font-size: 2rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            background: linear-gradient(45deg, #ff79ee, #ff6ec7);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .brand-description {
+            color: #b8c6db;
+            line-height: 1.6;
+            margin-bottom: 2rem;
+            max-width: 400px;
+        }
+
+        .social-buttons {
+            display: flex;
+            gap: 1rem;
+        }
+
+        .social-btn {
+            width: 45px;
+            height: 45px;
+            border-radius: 15px;
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #ffffff;
+            text-decoration: none;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .social-btn:hover {
+            background: rgba(255, 121, 238, 0.2);
+            border-color: #ff79ee;
+            transform: translateY(-3px) scale(1.05);
+            box-shadow: 0 8px 25px rgba(255, 121, 238, 0.3);
+            color: #ff79ee;
+        }
+
+        .social-btn i {
+            font-size: 1.2rem;
+        }
+
+        .footer-columns {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2rem;
+        }
+
+        .footer-column h4 {
+            color: #ff79ee;
+            font-size: 1.1rem;
+            margin-bottom: 1.5rem;
+            font-weight: 600;
+        }
+
+        .footer-column ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .footer-column li {
+            margin-bottom: 0.8rem;
+        }
+
+        .footer-column a {
+            color: #b8c6db;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            padding: 5px 0;
+            display: inline-block;
+            position: relative;
+        }
+
+        .footer-column a:hover {
+            color: #ff79ee;
+            transform: translateX(5px);
+        }
+
+        .footer-column a::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: #ff79ee;
+            transition: width 0.3s ease;
+        }
+
+        .footer-column a:hover::after {
+            width: 100%;
+        }
+
+        .footer-bottom {
+            text-align: center;
+            padding: 2rem 2rem 1rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            margin-top: 2rem;
+        }
+
+        .footer-bottom p {
+            color: #b8c6db;
+            font-size: 0.9rem;
+        }
+
+        .vv-pink {
+            color: #ff79ee;
+            font-weight: 600;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .footer-content {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+                text-align: center;
+            }
+
+            .footer-brand {
+                text-align: center;
+            }
+
+            .social-buttons {
+                justify-content: center;
+            }
+
+            .footer-columns {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+                text-align: left;
+            }
+
+            .brand-description {
+                max-width: 100%;
+            }
+        }
     </style>
 </head>
 <body>
@@ -141,5 +312,62 @@
             <strong>Note:</strong> This is a Windows desktop application. Download and run the executable file. The application works offline and doesn't require installation.
         </div>
     </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-brand">
+                <h3 class="brand-title">Reinstaller</h3>
+                <p class="brand-description">
+                    Professional software reinstallation management tool that tracks your application history and simplifies the reinstallation workflow.
+                </p>
+                <div class="social-buttons">
+                    <a href="https://vvraju.netlify.app/" class="social-btn" title="Website">
+                        <i class="fas fa-globe"></i>
+                    </a>
+                    <a href="https://github.com/vvraju56" class="social-btn" title="GitHub">
+                        <i class="fab fa-github"></i>
+                    </a>
+                    <a href="https://www.linkedin.com/in/vishnuraju-v-757b9929b" class="social-btn" title="LinkedIn">
+                        <i class="fab fa-linkedin"></i>
+                    </a>
+                </div>
+            </div>
+
+            <div class="footer-columns">
+                <div class="footer-column">
+                    <h4>Features & Tools</h4>
+                    <ul>
+                        <li><a href="#">Application Tracking</a></li>
+                        <li><a href="#">Install History</a></li>
+                        <li><a href="#">Version Management</a></li>
+                        <li><a href="#">File Monitoring</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4>Resources</h4>
+                    <ul>
+                        <li><a href="#">Documentation</a></li>
+                        <li><a href="#">User Guide</a></li>
+                        <li><a href="#">API Reference</a></li>
+                        <li><a href="#">Changelog</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4>Support</h4>
+                    <ul>
+                        <li><a href="#">Help Center</a></li>
+                        <li><a href="#">Contact Us</a></li>
+                        <li><a href="#">Bug Reports</a></li>
+                        <li><a href="#">Feature Requests</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>&copy; 2024 REINSTALLER. All rights reserved. Made with ❤️ by <span class="vv-pink">VV</span></p>
+        </div>
+    </footer>
 </body>
 </html>
