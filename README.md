@@ -155,6 +155,6 @@ If you encounter any issues or have questions:
 
 ---
 
-**Made with ❤️ by [Your Name](https://github.com/vvraju56)**
+**Made with ❤️ by [VV](https://github.com/vvraju56)**
 
 *Reinstaller - Simplify your software reinstallation workflow*
