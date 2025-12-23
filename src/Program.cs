@@ -9,21 +9,9 @@ namespace Reinstaller
         public MainForm()
         {
             InitializeComponent();
-            SetApplicationIcon();
         }
 
-        private void SetApplicationIcon()
-        {
-            try
-            {
-                Icon appIcon = new Icon("src/assets/icon.ico");
-                this.Icon = appIcon;
-            }
-            catch (Exception ex)
-            {
-                Console.WriteLine($"Could not load icon: {ex.Message}");
-            }
-        }
+
 
         private void InitializeComponent()
         {

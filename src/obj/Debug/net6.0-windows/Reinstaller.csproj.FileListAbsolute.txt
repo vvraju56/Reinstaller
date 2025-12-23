@@ -1,0 +1,15 @@
+V:\work\my-md\Reinstaller\src\obj\Debug\net6.0-windows\Reinstaller.csproj.AssemblyReference.cache
+V:\work\my-md\Reinstaller\src\obj\Debug\net6.0-windows\Reinstaller.GeneratedMSBuildEditorConfig.editorconfig
+V:\work\my-md\Reinstaller\src\obj\Debug\net6.0-windows\Reinstaller.AssemblyInfoInputs.cache
+V:\work\my-md\Reinstaller\src\obj\Debug\net6.0-windows\Reinstaller.AssemblyInfo.cs
+V:\work\my-md\Reinstaller\src\obj\Debug\net6.0-windows\Reinstaller.csproj.CoreCompileInputs.cache
+V:\work\my-md\Reinstaller\src\bin\Debug\net6.0-windows\Reinstaller.exe
+V:\work\my-md\Reinstaller\src\obj\Debug\net6.0-windows\Reinstaller.dll
+V:\work\my-md\Reinstaller\src\obj\Debug\net6.0-windows\refint\Reinstaller.dll
+V:\work\my-md\Reinstaller\src\obj\Debug\net6.0-windows\Reinstaller.pdb
+V:\work\my-md\Reinstaller\src\bin\Debug\net6.0-windows\Reinstaller.deps.json
+V:\work\my-md\Reinstaller\src\bin\Debug\net6.0-windows\Reinstaller.runtimeconfig.json
+V:\work\my-md\Reinstaller\src\bin\Debug\net6.0-windows\Reinstaller.dll
+V:\work\my-md\Reinstaller\src\bin\Debug\net6.0-windows\Reinstaller.pdb
+V:\work\my-md\Reinstaller\src\obj\Debug\net6.0-windows\Reinstaller.genruntimeconfig.cache
+V:\work\my-md\Reinstaller\src\obj\Debug\net6.0-windows\ref\Reinstaller.dll
