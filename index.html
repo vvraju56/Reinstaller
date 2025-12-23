@@ -32,10 +32,10 @@
             font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
             background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
             min-height: 100vh;
-            display: flex;
-            align-items: center;
-            justify-content: center;
+            display: grid;
+            place-items: center;
             color: #333;
+            padding: 2rem 1rem;
         }
         
         .container {
@@ -45,7 +45,12 @@
             box-shadow: 0 20px 40px rgba(0,0,0,0.1);
             text-align: center;
             max-width: 600px;
-            width: 90%;
+            width: 100%;
+            max-width: 1200px;
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 2rem;
+            align-content: start;
         }
         
         .icon {
@@ -79,14 +84,29 @@
             padding: 1.5rem;
             border-radius: 10px;
             margin: 2rem 0;
-            text-align: left;
+        }
+        
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1rem;
+            align-items: start;
         }
         
         .feature {
             display: flex;
             align-items: center;
-            margin-bottom: 0.5rem;
+            padding: 0.75rem;
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
             color: #4a5568;
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+        
+        .feature:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
         }
         
         .feature::before {
@@ -94,6 +114,38 @@
             color: #48bb78;
             font-weight: bold;
             margin-right: 0.5rem;
+            flex-shrink: 0;
+        }
+
+        /* Sidebar Styles */
+        .sidebar {
+            display: grid;
+            grid-template-rows: auto auto;
+            gap: 2rem;
+            align-content: start;
+        }
+
+        .main-content-area {
+            display: grid;
+            gap: 2rem;
+            align-content: start;
+        }
+
+        .header-section {
+            text-align: center;
+        }
+
+        .system-requirements {
+            background: #f0f9ff;
+            border: 1px solid #bae6fd;
+            color: #0c4a6e;
+            padding: 1.5rem;
+            border-radius: 10px;
+        }
+
+        .system-requirements h3 {
+            color: #0369a1;
+            margin-bottom: 1rem;
         }
         
         .download-section {
@@ -227,6 +279,27 @@
             }
         }
 
+        /* Grid-based Layout System */
+        .content-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 2rem;
+            align-content: start;
+        }
+
+        .two-column-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            align-items: start;
+        }
+
+        .three-column-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+        }
+
         /* Footer Styles */
         .footer {
             background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
@@ -242,7 +315,7 @@
             margin: 0 auto;
             padding: 0 2rem;
             display: grid;
-            grid-template-columns: 1fr 2fr;
+            grid-template-columns: minmax(300px, 1fr) 2fr;
             gap: 3rem;
             align-items: start;
         }
@@ -303,7 +376,7 @@
 
         .footer-columns {
             display: grid;
-            grid-template-columns: repeat(3, 1fr);
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
             gap: 2rem;
         }
 
@@ -396,14 +469,24 @@
 
         /* Download Buttons Container */
         .download-buttons {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
+            display: grid;
+            grid-template-columns: 1fr;
             gap: 1rem;
+            justify-items: center;
         }
 
-        /* Responsive Design */
+        /* Responsive Grid Design */
         @media (max-width: 768px) {
+            body {
+                padding: 1rem 0.5rem;
+            }
+
+            .container {
+                padding: 2rem 1.5rem;
+                grid-template-columns: 1fr;
+                gap: 1.5rem;
+            }
+
             .footer-content {
                 grid-template-columns: 1fr;
                 gap: 2rem;
@@ -428,8 +511,14 @@
                 max-width: 100%;
             }
 
+            .download-buttons {
+                grid-template-columns: 1fr;
+                gap: 1rem;
+            }
+
             .download-btn {
                 min-width: 100%;
+                grid-column: 1;
                 flex-direction: column;
                 text-align: center;
                 gap: 0.5rem;
@@ -439,108 +528,179 @@
                 justify-content: center;
             }
 
-            .container {
-                padding: 2rem 1.5rem;
-                width: 95%;
-            }
-
             h1 {
                 font-size: 2rem;
+            }
+
+            .two-column-grid,
+            .three-column-grid,
+            .features-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .container {
+                grid-template-columns: 1fr;
+                padding: 2rem 1.5rem;
             }
         }
 
         @media (max-width: 480px) {
+            body {
+                padding: 0.5rem;
+            }
+
             .container {
                 padding: 1.5rem 1rem;
+                gap: 1rem;
             }
 
             .download-btn {
-                min-width: 100%;
                 padding: 1.2rem 1rem;
+                min-width: 100%;
             }
 
             .social-btn {
                 width: 40px;
                 height: 40px;
             }
+
+            .footer-content {
+                gap: 1.5rem;
+            }
+
+            .footer {
+                padding: 2rem 0 1rem;
+            }
+        }
+
+        /* Large Screen Optimizations */
+        @media (min-width: 1200px) {
+            .container {
+                grid-template-columns: minmax(600px, 2fr) minmax(300px, 1fr);
+                align-items: start;
+                gap: 3rem;
+            }
+
+            .footer-content {
+                grid-template-columns: minmax(350px, 1fr) 2fr;
+            }
+
+            .features-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        /* Ultra-wide Screens */
+        @media (min-width: 1600px) {
+            body {
+                padding: 3rem 2rem;
+            }
+
+            .container {
+                max-width: 1400px;
+                grid-template-columns: minmax(700px, 2fr) minmax(400px, 1fr);
+                gap: 4rem;
+            }
+
+            .features-grid {
+                grid-template-columns: repeat(3, 1fr);
+            }
         }
     </style>
 </head>
 <body>
-    <div class="container">
+    <div class="container content-grid">
         <!-- Skip to main content for accessibility -->
         <a href="#main-content" class="sr-only">Skip to main content</a>
         
-        <div class="icon" role="img" aria-label="Reinstaller icon">R</div>
-        <header>
-            <h1>Reinstaller</h1>
-            <p class="description">
-                A powerful software reinstallation management tool that tracks your application installation history and helps you manage reinstallations efficiently.
-            </p>
-        </header>
-        
-        <main id="main-content">
-            <section class="features" aria-label="Application Features">
-                <h2 class="sr-only">Features</h2>
-                <div class="feature">Track application installation history</div>
-                <div class="feature">Store installer metadata and versions</div>
-                <div class="feature">Monitor installer file existence</div>
-                <div class="feature">Reinstall statistics and timestamps</div>
-                <div class="feature">JSON-based data management</div>
-            </section>
-            
-            <section class="download-section" aria-label="Download Options">
-                <h2>Download Application</h2>
-                <p style="color: #718096; margin: 1rem 0;">
-                    Get original Windows executable (no installation required)
+        <!-- Main Content Area -->
+        <div class="main-content-area">
+            <header class="header-section">
+                <div class="icon" role="img" aria-label="Reinstaller icon">R</div>
+                <h1>Reinstaller</h1>
+                <p class="description">
+                    A powerful software reinstallation management tool that tracks your application installation history and helps you manage reinstallations efficiently.
                 </p>
-                
-                <!-- Error Message -->
-                <div id="download-error" class="error-message" role="alert"></div>
-                
-                <!-- Download Buttons -->
-                <div class="download-buttons">
-                    <a href="Reinstaller.exe" class="download-btn will-change-transform" download data-size="68.42 MB" onclick="handleDownload('Reinstaller.exe', event)">
-                        <span class="btn-content">
-                            <i class="fas fa-download"></i>
-                            Download Original Reinstaller.exe
-                        </span>
-                        <span class="btn-size">68.42 MB</span>
-                    </a>
-                    <a href="Reinstaller_Original.zip" class="download-btn will-change-transform" download data-size="63.08 MB" onclick="handleDownload('Reinstaller_Original.zip', event)">
-                        <span class="btn-content">
-                            <i class="fas fa-compress"></i>
-                            Download Compressed Version
-                        </span>
-                        <span class="btn-size">63.08 MB</span>
-                    </a>
-                    <a href="Reinstaller_Package.zip" class="download-btn will-change-transform" download data-size="65.96 MB" onclick="handleDownload('Reinstaller_Package.zip', event)">
-                        <span class="btn-content">
-                            <i class="fas fa-archive"></i>
-                            Download Development Package
-                        </span>
-                        <span class="btn-size">65.96 MB</span>
-                    </a>
-                </div>
-                
-                <!-- Loading State -->
-                <div id="loading-state" class="loading" style="display: none;">
-                    <div class="spinner"></div>
-                    <span>Preparing download...</span>
-                </div>
-            </section>
+            </header>
             
+            <main id="main-content">
+                <section class="features" aria-label="Application Features">
+                    <h2 class="sr-only">Features</h2>
+                    <div class="features-grid">
+                        <div class="feature">Track application installation history</div>
+                        <div class="feature">Store installer metadata and versions</div>
+                        <div class="feature">Monitor installer file existence</div>
+                        <div class="feature">Reinstall statistics and timestamps</div>
+                        <div class="feature">JSON-based data management</div>
+                    </div>
+                </section>
+                
+                <section class="download-section" aria-label="Download Options">
+                    <h2>Download Application</h2>
+                    <p style="color: #718096; margin: 1rem 0;">
+                        Get original Windows executable (no installation required)
+                    </p>
+                    
+                    <!-- Error Message -->
+                    <div id="download-error" class="error-message" role="alert"></div>
+                    
+                    <!-- Download Buttons -->
+                    <div class="download-buttons">
+                        <a href="Reinstaller.exe" class="download-btn will-change-transform" download data-size="68.42 MB" onclick="handleDownload('Reinstaller.exe', event)">
+                            <span class="btn-content">
+                                <i class="fas fa-download"></i>
+                                Download Original Reinstaller.exe
+                            </span>
+                            <span class="btn-size">68.42 MB</span>
+                        </a>
+                        <a href="Reinstaller_Original.zip" class="download-btn will-change-transform" download data-size="63.08 MB" onclick="handleDownload('Reinstaller_Original.zip', event)">
+                            <span class="btn-content">
+                                <i class="fas fa-compress"></i>
+                                Download Compressed Version
+                            </span>
+                            <span class="btn-size">63.08 MB</span>
+                        </a>
+                        <a href="Reinstaller_Package.zip" class="download-btn will-change-transform" download data-size="65.96 MB" onclick="handleDownload('Reinstaller_Package.zip', event)">
+                            <span class="btn-content">
+                                <i class="fas fa-archive"></i>
+                                Download Development Package
+                            </span>
+                            <span class="btn-size">65.96 MB</span>
+                        </a>
+                    </div>
+                    
+                    <!-- Loading State -->
+                    <div id="loading-state" class="loading" style="display: none;">
+                        <div class="spinner"></div>
+                        <span>Preparing download...</span>
+                    </div>
+                </section>
+            </main>
+        </div>
+
+        <!-- Sidebar Area -->
+        <aside class="sidebar">
             <section class="note" aria-label="Important Information">
-                <h3 class="sr-only">Important Information</h3>
-                <p><strong>Note:</strong> This is a Windows desktop application. Download and run the executable file. The application works offline and doesn't require installation.</p>
+                <h3>Important Information</h3>
+                <p><strong>Note:</strong> This is a Windows desktop application.</p>
                 <ul style="text-align: left; margin-top: 1rem; color: #856404;">
-                    <li>Compatible with Windows 10 and Windows 11</li>
+                    <li>Compatible with Windows 10/11</li>
                     <li>No additional software required</li>
                     <li>Portable - runs from any location</li>
                     <li>Creates configuration files automatically</li>
                 </ul>
             </section>
-        </main>
+
+            <section class="system-requirements">
+                <h3>System Requirements</h3>
+                <ul style="text-align: left; color: #4a5568;">
+                    <li>Windows 10 or Windows 11</li>
+                    <li>2 GB RAM minimum</li>
+                    <li>100 MB free disk space</li>
+                    <li>64-bit processor required</li>
+                </ul>
+            </section>
+        </aside>
     </div>
         
         <div class="download-section">
