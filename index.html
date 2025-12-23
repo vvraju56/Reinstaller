@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reinstaller - Software Reinstallation Management</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #333;
+        }
+        
+        .container {
+            background: white;
+            padding: 3rem;
+            border-radius: 20px;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+            text-align: center;
+            max-width: 600px;
+            width: 90%;
+        }
+        
+        .icon {
+            width: 80px;
+            height: 80px;
+            margin: 0 auto 2rem;
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            border-radius: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 2rem;
+            font-weight: bold;
+        }
+        
+        h1 {
+            color: #2d3748;
+            margin-bottom: 1rem;
+            font-size: 2.5rem;
+        }
+        
+        .description {
+            color: #718096;
+            margin-bottom: 2rem;
+            line-height: 1.6;
+        }
+        
+        .features {
+            background: #f7fafc;
+            padding: 1.5rem;
+            border-radius: 10px;
+            margin: 2rem 0;
+            text-align: left;
+        }
+        
+        .feature {
+            display: flex;
+            align-items: center;
+            margin-bottom: 0.5rem;
+            color: #4a5568;
+        }
+        
+        .feature::before {
+            content: "✓";
+            color: #48bb78;
+            font-weight: bold;
+            margin-right: 0.5rem;
+        }
+        
+        .download-section {
+            margin-top: 2rem;
+        }
+        
+        .download-btn {
+            display: inline-block;
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            color: white;
+            padding: 1rem 2rem;
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: 600;
+            transition: transform 0.2s, box-shadow 0.2s;
+            margin: 0.5rem;
+        }
+        
+        .download-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 20px rgba(102, 126, 234, 0.4);
+        }
+        
+        .note {
+            background: #fff3cd;
+            border: 1px solid #ffeaa7;
+            color: #856404;
+            padding: 1rem;
+            border-radius: 8px;
+            margin-top: 1.5rem;
+            font-size: 0.9rem;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="icon">R</div>
+        <h1>Reinstaller</h1>
+        <p class="description">
+            A powerful software reinstallation management tool that tracks your application installation history and helps you manage reinstallations efficiently.
+        </p>
+        
+        <div class="features">
+            <div class="feature">Track application installation history</div>
+            <div class="feature">Store installer metadata and versions</div>
+            <div class="feature">Monitor installer file existence</div>
+            <div class="feature">Reinstall statistics and timestamps</div>
+            <div class="feature">JSON-based data management</div>
+        </div>
+        
+        <div class="download-section">
+            <h3>Download Application</h3>
+            <p style="color: #718096; margin: 1rem 0;">
+                Get the standalone Windows executable (no installation required)
+            </p>
+            <a href="publish/Reinstaller.exe" class="download-btn" download>Download Reinstaller.exe</a>
+            <a href="Reinstaller_Package.zip" class="download-btn" download>Download Full Package</a>
+        </div>
+        
+        <div class="note">
+            <strong>Note:</strong> This is a Windows desktop application. Download and run the executable file. The application works offline and doesn't require installation.
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,20 @@
+{
+  "version": 2,
+  "name": "reinstaller",
+  "builds": [
+    {
+      "src": "index.html",
+      "use": "@vercel/static"
+    }
+  ],
+  "routes": [
+    {
+      "src": "/download",
+      "dest": "/download.html"
+    },
+    {
+      "src": "/(.*)",
+      "dest": "/index.html"
+    }
+  ]
+}

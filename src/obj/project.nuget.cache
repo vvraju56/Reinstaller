@@ -1,11 +1,14 @@
 {
   "version": 2,
-  "dgSpecHash": "dn7hX3VQe5lz8QgGz4PWWWwN1R24vlV0TcSiei7HaCknLCPHm52T5/hna8XxuCHZaGayX/Wgfl2zAVjd156VTA==",
+  "dgSpecHash": "ukCxbDIgpeoMAHkwGpF0O8Mxi/NnVfUYV/LJPlpCE7wmXuADRivdlZKkyBrPw53AgKPj6W28pS9yIwuvwbunkg==",
   "success": true,
   "projectFilePath": "V:\\work\\my-md\\Reinstaller\\src\\Reinstaller.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Raju\\.nuget\\packages\\microsoft.win32.systemevents\\6.0.0\\microsoft.win32.systemevents.6.0.0.nupkg.sha512",
-    "C:\\Users\\Raju\\.nuget\\packages\\system.drawing.common\\6.0.0\\system.drawing.common.6.0.0.nupkg.sha512"
+    "C:\\Users\\Raju\\.nuget\\packages\\system.drawing.common\\6.0.0\\system.drawing.common.6.0.0.nupkg.sha512",
+    "C:\\Users\\Raju\\.nuget\\packages\\microsoft.netcore.app.runtime.win-x64\\6.0.36\\microsoft.netcore.app.runtime.win-x64.6.0.36.nupkg.sha512",
+    "C:\\Users\\Raju\\.nuget\\packages\\microsoft.windowsdesktop.app.runtime.win-x64\\6.0.36\\microsoft.windowsdesktop.app.runtime.win-x64.6.0.36.nupkg.sha512",
+    "C:\\Users\\Raju\\.nuget\\packages\\microsoft.aspnetcore.app.runtime.win-x64\\6.0.36\\microsoft.aspnetcore.app.runtime.win-x64.6.0.36.nupkg.sha512"
   ],
   "logs": []
 }
