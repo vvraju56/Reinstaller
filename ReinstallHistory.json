@@ -1,0 +1,25 @@
+[
+  {
+    "id": "80322bf6-d15d-418c-ad1b-d9bc229de8b2",
+    "applicationName": "Warp",
+    "applicationVersion": "v0.2025.09.24.08.11.stable_00",
+    "publisher": "Denver Technologies, Inc.",
+    "installerPath": "C:\\Users\\Raju\\Downloads\\WarpSetup.exe",
+    "installerFileName": "WarpSetup.exe",
+    "reinstallDate": "2025-09-28T07:53:10.7995393+05:30",
+    "displayIcon": "file:///C:/Users/Raju/OneDrive/Desktop/IconCache/Warp.png",
+    "status": 0,
+    "notes": "",
+    "installerSize": 66993496,
+    "reinstallCount": 21,
+    "lastReinstall": "2025-10-05T20:30:32.7018671+05:30",
+    "originalUninstallString": "\u0022C:\\Users\\Raju\\AppData\\Local\\Programs\\Warp\\unins000.exe\u0022",
+    "originalRegistryKey": "HKEY_CURRENT_USER\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Uninstall\\warp-terminal-stable_is1",
+    "reinstallDateFormatted": "2025-09-28 07:53",
+    "lastReinstallFormatted": "2025-10-05 20:30",
+    "installerSizeFormatted": "63.9 MB",
+    "statusDisplayText": "\u2705 Success",
+    "installerExists": true,
+    "installerStatusIcon": "\u2705"
+  }
+]
